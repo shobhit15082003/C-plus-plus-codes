@@ -1,0 +1,1 @@
+{"name":"Local: kjdzgndk","url":"d:\\codeforces\\contest 21072023\\kjdzgndk.cpp","tests":[{"id":1689974952206,"input":"5\n8 1 2\n4 4 5\n9 9 9\n0 0 0\n8 5 3","output":""},{"id":1690037578767,"input":"1\n8 1 2","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\codeforces\\contest 21072023\\kjdzgndk.cpp","group":"local","local":true}

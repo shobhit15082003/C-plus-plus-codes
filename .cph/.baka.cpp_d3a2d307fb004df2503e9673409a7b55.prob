@@ -1,0 +1,1 @@
+{"name":"Local: baka","url":"d:\\codeforces\\contest 21072023\\baka.cpp","tests":[{"id":1703239048778,"input":"3\n6\nACBCBC\n7\nAAAAFPC\n22\nFEADBBDFFEDFFFDHHHADCC","output":"3\n1\n4"},{"id":1703239292381,"input":"1\n6\nABABA","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\codeforces\\contest 21072023\\baka.cpp","group":"local","local":true}
