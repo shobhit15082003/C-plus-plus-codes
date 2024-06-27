@@ -228,34 +228,53 @@ int cntDivisors(int n)
 
 void solve()
 {
-    ll x,y,k;
-    cin>>x>>y>>k;
-    while(x>1&&k>0)
+    ll n,m;
+    cin>>n>>m;
+    vin(a,n);
+    vin(b,n);
+    vll aka,bka;
+    for(ll i=0;i<n;i++)
     {
-       
-      ll  rem=(y-(x%y));
-
-        if(k<=rem)
-        {
-            x+=k;
-            k=0;
-            while(x%y==0)
-            x/=y;
-            cout(x);
-            return;
-        }
-        k-=rem;
-         x+=(y-(x%y));
-        while(x%y==0)
-        x/=y;
+        aka.pb(a[i]%m);
+        ll ola=m-b[i]%m;
+        if(ola==m)
+        ola=0;
+        bka.pb(ola);
     }
-    ll baka;
-    if(k>0){
-     baka=k%(y-1);
-    baka+=x;
-    while(baka%y==0)
-    baka/=y;}
-    cout(baka);
+    // print(aka);
+    // change;
+    // print(bka);
+    // change;
+    ll sum=0;
+    map<ll,ll>mm,aa;
+
+    for(ll i=0;i<n;i++)
+    {
+        ll val=aka[i];
+        
+        mm[val]++;
+    }
+     for(ll i=0;i<n;i++)
+    {
+        ll val=bka[i];
+       
+        
+         aa[val]++;
+    }
+    sll s;
+    for(ll i=0;i<n;i++)
+    s.insert(aka[i]);
+    aka.clear();
+    n=s.size();
+    for(auto it:s)
+    aka.pb(it);
+    for(ll i=0;i<n;i++)
+    {
+      //  cout<<aka[i]<<" "<<mm[aka[i]]<<" "<<aa[aka[i]]<<endl;
+        if(mm[aka[i]]>0&&aa[aka[i]]>0)
+        sum+=(mm[aka[i]]*aa[aka[i]]);
+    }
+    cout(sum);
 
 }
 

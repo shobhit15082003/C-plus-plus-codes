@@ -228,35 +228,55 @@ int cntDivisors(int n)
 
 void solve()
 {
-    ll x,y,k;
-    cin>>x>>y>>k;
-    while(x>1&&k>0)
+    ll n;
+    cin>>n;
+    if(n<4)
     {
-       
-      ll  rem=(y-(x%y));
-
-        if(k<=rem)
-        {
-            x+=k;
-            k=0;
-            while(x%y==0)
-            x/=y;
-            cout(x);
-            return;
-        }
-        k-=rem;
-         x+=(y-(x%y));
-        while(x%y==0)
-        x/=y;
+        for(ll i=1;i<=n;i++)
+        cout<<i<<" ";
+        change;
+        return;
     }
-    ll baka;
-    if(k>0){
-     baka=k%(y-1);
-    baka+=x;
-    while(baka%y==0)
-    baka/=y;}
-    cout(baka);
-
+    vll first,second;
+    for(ll i=1;i<=n/2;i++)
+    first.pb(i);
+    for(ll i=(n/2)+1;i<=n;i++)
+    second.pb(i);
+    // print(first);
+    // change;
+    // print(second);
+    // change;
+    reverse(all(second));
+    vll ans;
+    ll store=n;
+    if(n%2==1)
+    {store=(second[0]);
+    second.erase(second.begin());}
+    for(ll i=0;i<n/2;i++)
+    {
+        
+        ans.pb(first[i]);
+        ans.pb(second[i]);
+    }
+    // if(store!=-1){
+    // //ans.pb(store);
+    //     //ans.insert(ans.begin()+ans.size()/2 -1,store);
+    //     ll index=ans.size()/2;
+    //     // index--;
+    //     vll oo;
+    //     for(ll i=0;i<ans.size();i++)
+    //     {
+    //         if(i==index)
+    //         oo.pb(store);
+    //         oo.pb(ans[i]);
+           
+    //     }
+    //      ans=oo;
+    // }
+    if(n%2==1)
+    ans.pb(store);
+    print(ans);
+    change;
 }
 
 

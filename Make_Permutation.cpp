@@ -228,35 +228,25 @@ int cntDivisors(int n)
 
 void solve()
 {
-    ll x,y,k;
-    cin>>x>>y>>k;
-    while(x>1&&k>0)
+    ll n;
+    cin>>n;
+    vin(v,n);
+    sort(all(v));
+    if(v[0]!=1)
     {
-       
-      ll  rem=(y-(x%y));
-
-        if(k<=rem)
+        nope;
+        return;
+    }
+   
+    for(ll i=1;i<=n;i++)
+    {
+        if(v[i-1]>i)
         {
-            x+=k;
-            k=0;
-            while(x%y==0)
-            x/=y;
-            cout(x);
+            nope;
             return;
         }
-        k-=rem;
-         x+=(y-(x%y));
-        while(x%y==0)
-        x/=y;
-    }
-    ll baka;
-    if(k>0){
-     baka=k%(y-1);
-    baka+=x;
-    while(baka%y==0)
-    baka/=y;}
-    cout(baka);
-
+    }    
+    yep;
 }
 
 
