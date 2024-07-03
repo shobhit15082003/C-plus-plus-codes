@@ -228,60 +228,8 @@ int cntDivisors(int n)
 
 void solve()
 {
-    ll n;
-    cin>>n;
-    vin(v,n);
-   // ll k=2;
-    sll s;
-    for(ll i=0;i<n;i++)
-    {
-        s.insert((v[i]%2));
-    }
-    if(s.size()==2)
-    {
-        cout(2);
-        return;
-    }
-    s.clear();
-    // for(ll i=0;i<n;i++)
-    // {
-    //     printBinary(v[i]);
-    //     change;
-    // }
-
-    sort(all(v));
-
-    ll k=1,ultak=v[1]+5;
-   // hello;
-   sll ultas;
-    while(s.size()!=2){
-        s.clear();
-        k+=1;
-        ultak-=1;
-        for(ll i=0;i<n;i++)
-        {
-            ll baka=v[i]%k;
-            ll ultabaka=v[i]%ultak;
-            s.insert(baka);
-            ultas.insert(ultabaka);
-        }
-        if(s.size()==2)
-        {
-            cout(k);
-            return;
-        }
-        if(ultas.size()==2)
-        {
-            cout(ultak);
-            return;
-        }
-        if(ultak<k)
-        {
-            cout(-1);
-            return;
-        }
- 
-    }
+    auto i=(94&&7);
+    cout(i);
 }
 
 
@@ -290,7 +238,7 @@ void solve()
 int main() 
 {
  fast
- test_case
+ 
  solve();
 }
 

@@ -231,57 +231,41 @@ void solve()
     ll n;
     cin>>n;
     vin(v,n);
-   // ll k=2;
+    mll m;
     sll s;
+    vll a;
     for(ll i=0;i<n;i++)
     {
-        s.insert((v[i]%2));
+        m[v[i]]++;
+        s.insert(v[i]);
+
     }
-    if(s.size()==2)
+    for(auto it:s)
+    a.pb(it);
+    reverse(all(a));
+    ll ans=m[a[0]];
+  //  cout(ans);
+    ll prev=m[a[0]];
+    if(a.size()==1)
     {
-        cout(2);
+        //hello;
+        cout(ans);
         return;
     }
-    s.clear();
-    // for(ll i=0;i<n;i++)
-    // {
-    //     printBinary(v[i]);
-    //     change;
-    // }
-
-    sort(all(v));
-
-    ll k=1,ultak=v[1]+5;
-   // hello;
-   sll ultas;
-    while(s.size()!=2){
-        s.clear();
-        k+=1;
-        ultak-=1;
-        for(ll i=0;i<n;i++)
+    for(ll i=1;i<a.size();i++)
+    {
+      //  hello;
+        if(a[i]-a[i-1]!=-1)
         {
-            ll baka=v[i]%k;
-            ll ultabaka=v[i]%ultak;
-            s.insert(baka);
-            ultas.insert(ultabaka);
+            ans+=m[a[i]];
+            prev=m[a[i]];
+            continue;
         }
-        if(s.size()==2)
-        {
-            cout(k);
-            return;
-        }
-        if(ultas.size()==2)
-        {
-            cout(ultak);
-            return;
-        }
-        if(ultak<k)
-        {
-            cout(-1);
-            return;
-        }
- 
+        ll curr=m[a[i]];
+        ans+=max(0,curr-prev);
+        prev=curr;
     }
+    cout(ans);
 }
 
 
